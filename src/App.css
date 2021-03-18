@@ -1,0 +1,25 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  /* background-color: yellowgreen; */
+}
+
+.intro{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  /* background-color: chocolate; */
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+    width: 75%;
+    height: 100%;
+    background-color: cadetblue;
+}
+

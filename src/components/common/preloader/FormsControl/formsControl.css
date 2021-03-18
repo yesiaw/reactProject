@@ -1,0 +1,16 @@
+.container-textarea{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 300px;
+    height: 75px;
+    /* background-color: antiquewhite; */
+}
+.error-textarea{
+    display: flex;
+}
+.error-style{
+    width: auto;
+    background-color: red;
+
+}
