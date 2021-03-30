@@ -2,6 +2,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { follow, setUsers, unfollow, setCurrentPage, setTotalUsersCount, setIsFetching, toogleFollow, getUsersThunkCreator, UnFollowThunkCreator, FollowThunkCreator } from '../../redux/users-reducer';
+import { getcurrentPage, getFollowingInProgress, getisFetching, getPageSize, gettotalUsersCount, getUsers, getUsersSelector } from '../../redux/users-reselect';
 import Preloader from '../common/preloader/preloader';
 import Users from './Users';
 import './users.css'
@@ -42,12 +43,12 @@ class UsersApiContainer extends React.Component {
 
 let mapStateToProps = (state) => {
     return {
-        users: state.usersPage.users,
-        pageSize: state.usersPage.pageSize,
-        totalUsersCount: state.usersPage.totalUsersCount,
-        currentPage: state.usersPage.currentPage,
-        isFetching: state.usersPage.isFetching,
-        FollowingInProgress: state.usersPage.FollowingInProgress
+        users: getUsersSelector(state),
+        pageSize: getPageSize(state),
+        totalUsersCount: gettotalUsersCount(state),
+        currentPage: getcurrentPage(state),
+        isFetching: getisFetching(state),
+        FollowingInProgress: getFollowingInProgress(state)
     }
 
 }

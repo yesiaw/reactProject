@@ -22,6 +22,5 @@ export const HocControls = ({input, meta, nameComponent, ...props }) => {
         ) 
 }
 
-// nameComponent === 'textarea' ? <textarea {...input} {...meta} {...props} /> : 
 
 

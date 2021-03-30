@@ -1,16 +1,13 @@
 import React from 'react';
 import Header from './header';
-import * as axios from 'axios';
 import { connect } from 'react-redux';
 import { setAuthMe, setUserData, logout } from '../../redux/auth-reducer';
-import { usersAPI } from '../../api/api';
+
 
 
 class HeaderContainer extends React.Component {
 
-  componentDidMount() {
-    this.props.setAuthMe();
-  }
+  
   render() {
     return <Header {...this.props} />
   }
